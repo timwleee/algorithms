@@ -2,10 +2,9 @@ function LinkedList () {
     this.head = null;
 }
 
-function Node(value, next, prev) {
+function Node(value, next) {
     this.value = value;
     this.next = next;
-    this.prev = prev;
 }
 
 LinkedList.prototype.addNode = function(value) {
