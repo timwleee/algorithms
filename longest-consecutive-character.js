@@ -4,22 +4,25 @@ function longestSequence(str) {
     let max_count = 0;
     let max_char;
     let prev_char;
-    let current;
-    let count = 0;
+    let current_char;
+    let current_count = 0;
     for (let i = 1; i < str.length; i++) {
-        let current = i;
-        let prev_char = str(i-1);
-        if (prev_char = current) {
+        let current_char = str.charAt(i);
+        let prev_char = str.charAt(i-1);
+        if (current_char == prev_char) {
             max_count++;
-            count = max_count;
-        } else {
-            count = 0;
+        } else { 
+            current_count = 1;
         }
-
-    }
+        if (max_count > current_count) {
+            max_char = current_char;
+            prev_char = current_char;
+        }
+    };
     console.log(max_char);
+    console.log(max_count);
 }
 
-const str = "eeeeiiiwwwhhhhggggglliqqaappp"
+const str = "eeeeiiwwwhhhhggggglliqqaappp"
 longestSequence(str);
 
