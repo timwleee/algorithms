@@ -6,18 +6,20 @@ function longestSequence(str) {
     let prev_char;
     let current_char;
     let current_count = 0;
-    for (let i = 1; i < str.length; i++) {
+    for (let i = 2; i < str.length; i++) {
         let current_char = str.charAt(i);
         let prev_char = str.charAt(i-1);
         if (current_char == prev_char) {
             max_count++;
+            max_char = current_char;
         } else { 
             current_count = 1;
         }
-        if (max_count > current_count) {
+        if (current_count > max_count) {
+            max_count = current_count;
             max_char = current_char;
-            prev_char = current_char;
         }
+        prev_char = current_char;
     };
     console.log(max_char);
     console.log(max_count);
