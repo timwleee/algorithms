@@ -5,11 +5,11 @@ function longestSequence(str) {
     let max_char;
     let prev_char;
     let current_char;
-    let current_count = 0;
+    let current_count = 1;
     for (let i = 2; i < str.length; i++) {
         let current_char = str.charAt(i);
         let prev_char = str.charAt(i-1);
-        if (current_char == prev_char) {
+        if (current_char === prev_char) {
             max_count++;
             max_char = current_char;
         } else { 

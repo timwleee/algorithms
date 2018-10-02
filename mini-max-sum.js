@@ -3,7 +3,10 @@
 function miniMaxSum(arr) {
     let miniSum = 0;
     let maxSum = 0;
-    
+    let newArr = [];
+    for (let i = 0; i <= 4; i++) {
+        
+    }
 }
 
 const arr = [5,15,2,6,9]
