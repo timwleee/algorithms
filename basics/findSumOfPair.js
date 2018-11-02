@@ -10,4 +10,4 @@ function findSum(arr, sum) {
      return false;
 }
 
-findSum([6,4,3,2,1,7], 9)
+findSum([6,2,8,9,2,1,7,3], 17)
